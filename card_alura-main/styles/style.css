@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --cor-primaria: #2F4F7F; /* Azul escuro */
+    --cor-secundaria: #66D9EF; /* Verde neon */
+    --cor-terciaria: #8B9467; /* Azul claro */
+    --cor-hover: #B3C8CF;
+
+    --fonte-primaria: 'Roboto Mono', monospace;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-image: url('assets/sol_nuvens.png'); /* Imagem de fundo para o dia */
+    background-size: cover; /* Para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    color: #F7F7F7; /* Cor do texto em branco */
+    box-sizing: border-box;
+    background: linear-gradient(180deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+}
+
+
+.cabecalho {
+    display: flex;
+    position: relative;
+    width: 90%;
+    max-width:fit-content;
+    margin: 0 auto;
+    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--cor-secundaria);
+    flex-wrap: wrap;
+}
+
+
+.cabecalho__menu{ 
+    display: flex;
+    gap: 170px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens no eixo principal */
+    }
+
+    .cabecalho__menu {
+        flex-direction: column; /* Empilha os itens do menu verticalmente */
+        gap: 20px; /* Diminui o espaçamento entre itens */
+    }
+}
+
+
+.logotipo{
+    display: flex;
+    width: 180%;
+    height: 50px;
+    object-fit: contain; 
+    border-radius: 5px;
+    color: #F7F7F7; /* Logotipo em branco */
+}
+
+.logotipo:hover{
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    color: var(--cor-hover);
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: #F7F7F7; /* Cabeçalho em branco */
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cabecalho__menu__link:hover{
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    color: #66D9EF; /* Verde neon ao passar o mouse */
+}
+
+.cabecalho__menu__icones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    gap: 25%;
+}
+
+/* Adicionando estilo de Cybersecurity */
+.cabecalho__menu__icones a {
+    transition: transform 0.3s;
+}
+
+.cabecalho__menu__icones a:hover {
+    transform: scale(1.1);
+}
+
+.cabecalho__menu__icones-noite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    height: 25px;
+    position: relative;
+}
+
+.cabecalho__menu__icones-dia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    height: 25px;
+    position: relative;
+}
+
+.cabecalho__menu__icones-dia:hover {
+    background-color: var(--cor-hover);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.cabecalho__menu__icones-noite:hover{
+    background-color: var(--cor-hover);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.display__cartao{
+    display: flex;
+    padding: 3%;
+}
+
+.cartao__ricardo-souza {
+    background-image:url('assets/imagem-de-fundo.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: 360px;
+    height: 520px;
+    border: 2px solid var(--cor-secundaria);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.cartao__ricardo-souza {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.foto-perfil{
+    position: relative;
+    width: 50%;
+    border-radius: 50%;
+    padding: 8%;
+}
+
+.nome{
+    font-family: var(--fonte-primaria);
+    color: #FFFFFF; /* Nome em branco */
+}
+
+.formacao{
+    font-family: var(--fonte-secundaria);
+    color: #F7F7F7; /* Formação em branco */
+}
+
+.paragrafo-apresentacao{
+    font-family: var(--fonte-primaria);
+    font-size: 80%;
+    color: #F7F7F7; /* Parágrafo em branco */
+    text-align: center;
+}
+
+@keyframes animacao-emoji {
+    from {font-size: 18px}
+    to {font-size: 20px}
+}
+
+.emoji{
+    font-size: 18px;
+    animation: animacao-emoji 1s 1s infinite;
+}
+
+.link-alura{
+    font-family: var(--fonte-primaria);
+    font-size: 90%;
+    color: #66D9EF; /* Link em verde neon */
+    text-align: center;
+    text-decoration: none;
+}
+
+.link-alura:hover{
+    font-family: var(--fonte-primaria);
+    color: #FFFFFF; /* Link em branco ao passar o mouse */
+    text-align: center;
+    text-decoration: none;
+}
+
+.contatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+    padding: 10%;
+}
+
+.linkedin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 50px;
+    position: relative;
+}
+
+.github{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    width: 40px;
+    height: 38px;
+    position: relative;
+}
+
+footer {
+    background-color: #F7F7F7; /* Fundo claro para o tema diurno */
+    color: #1A1A2E; /* Texto escuro */
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #4A628A; /* Cor dos links no tema diurno */
+}
+
+footer a:hover {
+    color: #66D9EF; /* Cor dos links ao passar o mouse */
+}
